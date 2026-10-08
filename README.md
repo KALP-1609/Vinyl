@@ -10,6 +10,8 @@ A tiny, glassy, always-on-top vinyl player for macOS that follows the **Spotify 
 
 Requires **macOS 14 (Sonoma) or newer** and the **Spotify desktop app** (not the web player). Works with Free and Premium.
 
+Vinyl is an independent project and is not affiliated with, endorsed by, or sponsored by Spotify. “Spotify” is a trademark of Spotify AB.
+
 ## Install
 
 1. Download `Vinyl-x.y.z.dmg` from the [Releases](../../releases) page.
@@ -38,7 +40,7 @@ Privacy: the only data sent anywhere is the song title, artist and length, to lr
 Requires Xcode (or the Command Line Tools) on macOS 14+.
 
 ```bash
-git clone <your repo url>
+git clone <https://github.com/KALP-1609/Vinyl>
 cd Vinyl
 bash scripts/build_app.sh 1.0.0       # creates dist/Vinyl.app, .zip and .dmg
 open dist/Vinyl.app
