@@ -46,17 +46,6 @@ bash scripts/build_app.sh 1.0.0       # creates dist/Vinyl.app, .zip and .dmg
 open dist/Vinyl.app
 ```
 
-## Publish a release (GitHub does the building)
-
-```bash
-git tag v1.0.0
-git push --tags
-```
-
-The workflow in `.github/workflows/release.yml` builds the app on GitHub and attaches the `.dmg` and `.zip` to a new release.
-
-> Want to remove the first-launch warning for everyone? That needs an Apple Developer ID ($99/year) to sign and notarize the app.
-
 ## License
 
 MIT
