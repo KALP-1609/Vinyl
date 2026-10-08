@@ -54,14 +54,14 @@ final class PlayerModel: ObservableObject {
     init() {
         // first poll slightly later so the window is on screen before any permission prompt
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in
-            Task { @MainActor in self?.poll() }
+            Task { @MainActor [weak self] in self?.poll() }
         }
         // .common run-loop mode keeps these alive while the window is being dragged
         let poller = Timer(timeInterval: 1.0, repeats: true) { [weak self] _ in
-            Task { @MainActor in self?.poll() }
+            Task { @MainActor [weak self] in self?.poll() }
         }
         let ticker = Timer(timeInterval: 0.25, repeats: true) { [weak self] _ in
-            Task { @MainActor in self?.extrapolate() }
+            Task { @MainActor [weak self] in self?.extrapolate() }
         }
         RunLoop.main.add(poller, forMode: .common)
         RunLoop.main.add(ticker, forMode: .common)
